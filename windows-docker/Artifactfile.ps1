@@ -315,8 +315,6 @@ try
             if ((Test-Path -Path $dockerPath -PathType Container) -and (Test-Path -Path $kitematicPath -PathType Container)) {
 
                 $dockerPathToKitematic = Join-Path $dockerPath "Kitematic"
-                Write-Output "-Path: '$dockerPathToKitematic'"
-                Write-Output "-Target: '$kitematicPath'"
 
                 # redirect default kitematic folder under docker to the chocolatey package folder 
                 # do Remove-Item first because sometimes we get 'ERROR: The directory is not empty.' otherwise
